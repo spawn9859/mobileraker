@@ -2,9 +2,9 @@ name: Android CI
 
 on:
   push:
-    branches: [ master ]
+    branches: [ dev ]
   pull_request:
-    branches: [ master ]
+    branches: [ dev ]
 
 jobs:
   build:
@@ -25,6 +25,8 @@ jobs:
     - name: Flutter action
       uses: subosito/flutter-action@v1.5.3
     - name: Flutter action1
+      run: flutter packages pub get
+    - name: Flutter action1.1
       run: flutter packages pub run build_runner build
     - name: Flutter action2
       run: flutter build apk
