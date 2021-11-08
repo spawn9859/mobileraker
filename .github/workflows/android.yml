@@ -25,6 +25,8 @@ jobs:
     - name: Flutter action
       uses: subosito/flutter-action@v1.5.3
     - name: Flutter action1
+      run: pub get
+    - name: Flutter action1
       run: flutter pub get
     - name: Flutter action1.1
       run: flutter packages pub run build_runner build
